@@ -1,6 +1,6 @@
 body{
     height: 100vh;
-    width: 100vh;
+    width: 100wh;
     background-color: white; 
     margin: 0px;
 }
@@ -38,4 +38,7 @@ h3{
 }
 .navbar li{
     float: left;
+}
+.navbar li{
+    margin: 20px;
 }
