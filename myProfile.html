@@ -28,10 +28,33 @@
   <hr>
     <main>
         
-        <h3>Feed</h3>
-        <p>Why hello this is the home page</p>
-    </main>
+        <h3 id="">this is my profile</h3>
+        <p id="Profilebio">computer science student at U of M Flint</p>
         
+    </main>
+    <div class ="dropdown">
+        <button onclick="toggleDorpdown()">Add to Profile</button>
+        <script>
+            function toggleDorpdown(){
+                var dropdown = document.getElementById("menu1");
+                if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                 dropdown.style.display = "block";
+                } else {
+                 dropdown.style.display = "none";
+                }
+            }
+        </script>
+        <div class="profileOptions" id="menu1">
+            <a href="">Core</a>
+            <a href="">Add about</a>
+            <a href="">Add education</a>
+            <a href="">Add position</a>
+            <a href="">Add Career Break</a>
+            <a href="">Add Skills</a>
+            <a href="">Recommended</a>
+            <a href="">Additional</a>
+        </div>
+    </div>
     </form>
     <script src="score.js"></script>
 </body>
