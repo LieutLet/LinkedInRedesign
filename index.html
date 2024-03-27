@@ -26,11 +26,84 @@
         <hr>
     </nav>
     <main class="main">
-        <h3>Feed</h3>
-        <p>Why hello this is the home page</p>
+        <nav style="background-color: hsl(0, 0%, 100%);" >
+            <ul>
+                <li style="background-color: hsl(0, 0%, 100%);"><a href="">Following & Connections</a></li>
+                <li style="background-color: hsl(0, 0%, 100%);"><a href="">Hashtags</a></li>
+                <li style="background-color: hsl(0, 0%, 100%);"><a href="">Sugested</a></li>
+            </ul>
+        </nav>
+        <!-- -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-header-details">
+                    <h2>John Doe</h2>
+                    <p>Software Engineer at ABC Inc.</p>
+                    <p>Posted on January 1, 2024</p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam velit eget justo efficitur, sit amet laoreet odio posuere.</p>
+                <p>Curabitur ac nisi ac arcu interdum sollicitudin. Vivamus vehicula magna nec purus efficitur tempus.</p>
+                <p>Phasellus in ullamcorper lorem. Sed sed elit vestibulum, convallis lectus eget, eleifend arcu. Nulla facilisi.</p>
+            </div>
+            <hr>
+            <div class="post-actions">
+                <button id="btnLike">Like</button>
+                <button id="btnComment">Comment</button>
+                <button id="btnShare">Share</button>
+            </div>
+        </div>
+        <!-- -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-header-details">
+                    <h2>Toby Powers</h2>
+                    <p>Software Engineer at ABC Inc.</p>
+                    <p>Posted on January 1, 2024</p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam velit eget justo efficitur, sit amet laoreet odio posuere.</p>
+                <p>Curabitur ac nisi ac arcu interdum sollicitudin. Vivamus vehicula magna nec purus efficitur tempus.</p>
+                <p>Phasellus in ullamcorper lorem. Sed sed elit vestibulum, convallis lectus eget, eleifend arcu. Nulla facilisi.</p>
+            </div>
+            <hr>
+            <div class="post-actions">
+                <button id="btnLike">Like</button>
+                <button id="btnComment">Comment</button>
+                <button id="btnShare">Share</button>
+            </div>
+        </div>
+        <!-- -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-header-details">
+                    <h2>Josh Thomas</h2>
+                    <p>Software Engineer at ABC Inc.</p>
+                    <p>Posted on January 1, 2024</p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam velit eget justo efficitur, sit amet laoreet odio posuere.</p>
+                <p>Curabitur ac nisi ac arcu interdum sollicitudin. Vivamus vehicula magna nec purus efficitur tempus.</p>
+                <p>Phasellus in ullamcorper lorem. Sed sed elit vestibulum, convallis lectus eget, eleifend arcu. Nulla facilisi.</p>
+            </div>
+            <hr>
+            <div class="post-actions">
+                <button id="btnLike">Like</button>
+                <button id="btnComment">Comment</button>
+                <button id="btnShare">Share</button>
+            </div>
+        </div>
+
     </main>
+    <!-- sidbar for profile -->
     <div class="sidebar">
-        <a href="myProfile.html" id="myLink">my profile</a>
+        <a href="myProfile.html" id="myLink" style="margin: 85px;">John Doe</a>
+
+        <hr>
+        <p style="margin-left: 75px;">Quick Links</p>
         <ul>
             <li><a href="#">Groups</a></li>
             <li><a href="#">Events</a></li>
@@ -38,7 +111,17 @@
             <li><a href="#">+ Add More</a></li>
         </ul>
     </div>
+
+    <!-- sidebar for news -->
+    <div class="newsWindow">
+        <h5 style="text-align: center;">News</h5>
+        <a target="_blank" href="bridge.jpg">
+            <img src="bridge.jpg" alt="Shipwreck" width="200px" style="margin-left: 23px;">
+        </a>
+        <p style="text-align: center;">Baltimore Bridge Collapse</p>
         
-    <script src="score.js"></script>
+    </div>
+        
+    <script src="index.js"></script>
 </body>
 </html>
