@@ -33,17 +33,26 @@ h3{
     display: flex;
     text-align: center;
 }
-.navbar a:hover{
-    background-color: hsl(0, 0%, 20%);
-}
+
 .navbar li{
     float: left;
 }
 .navbar li{
     margin: 20px;
 }
+.navbar a i{
+    font-size: 40px;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 10px;
+    min-width: 50px;
+    color: gray;
+}
 .navbar i{
     font-size: 50px;
+}
+.navbar hr{
+    margin: -20px;
 }
 .dropdown{
     display: inline-block;
@@ -68,9 +77,6 @@ h3{
     position: absolute;
     min-width: 100px;
     box-shadow: 1px 1px 1px hsl(0, 1%, 63%)
-}
-.dropdown:hover .profileOptions{
-    display: block;
 }
 .dropdown a:hover{
     background-color: hsl(0, 0%, 90%);
