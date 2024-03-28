@@ -83,7 +83,7 @@ h3{
 .sidebar {
     height: 500px;
     width: 250px;
-    position: fixed;
+    position: sticky;
     top: 30%;
     left: 10px;
     background-color: #ffffff;
@@ -209,3 +209,4 @@ button{
     border-radius: 10px;
     border-style: none;
 }
+

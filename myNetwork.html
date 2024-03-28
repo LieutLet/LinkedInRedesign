@@ -5,12 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link 
     rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <Link rel="stylesheet" href="netWrk.css/">
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
     <link rel="stylesheet" href="style.css"/>
     
     <title>LinkedIn Redesign/myNetwork</title>
+    <style>
+        .secBox{
+            border-style: solid;
+            border-width: 1px;
+            min-width: 300px;
+            max-width: 70%;
+        }
+        .linksList{
+            font-size: 2.5em;
+            margin-left: 3%;
+        }
+        .container {
+            margin-top: 25px;
+            margin-left: auto;
+            min-width: 70%;
+            max-height: 2000px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .containerAside {
+            margin-top: 25px;
+            margin-left: 70%;
+            margin-right: auto;
+            max-width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            float: left;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
 <body>
@@ -30,18 +69,22 @@
 
     <main class="main">
         <section>
-            <div class = "secBox">
-                <h1>Manage Network</h1>
-            </div>
-            <div>
+            <div class = "container" id = "netHeader">
+                <h1 class ="header">Manage Network</h1>
                 <ul class = "linksList">
-                    <li><a href = "connections.html">Connections</a></li>
-                    <li><a href = "groups.html">Groups</a></li>
-                    <li><a href = "events.html">events</a></li>
-                    <li><a href = "pages.html">pages</a></li> 
+                    <li><a href = "connections.html"><u>Connections</u></a></li>
+                    <li><a href = "groups.html"><u>Groups</u></a></li>
+                    <li><a href = "events.html"><u>Events</u></a></li>
+                    <li><a href = "pages.html"><u>Pages</u></a></li> 
                 </ul>
             </div>
         </section>
+
+        <aside>
+            <div class = "containerAside">
+                <h3 class = "header">People you may know</h3>
+            </div>
+        </aside>
     </main>
         
     <!-- profile window -->
