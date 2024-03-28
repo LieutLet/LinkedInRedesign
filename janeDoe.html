@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jane Doe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
+            <li><input id="navsearch" type="text" placeholder="Search"></li>
+            <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i></a></li>
+            <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i></a></li>
+            <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i></a></li>
+            <li><a href="notifications.html"><i class="fa-solid fa-bell"></i></a></li>
+            <li><a href="more.html"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+            
+        </ul>
+        <hr>
+    </nav>
+
+    
+    <main class="main">
+        <div class="header">
+             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture">
+             <div class="name">Jane Doe</div>
+             <div class="headline">Software Engineer at ABC Inc.</div>
+             <div class="headline">Flint, MI</div>
+             <div class="headline">janedoe@gmail.com</div>
+             <div class="dropdown">
+                <button onclick="toggleMessagingWindow()">Message</button>
+             </div>
+             <div class ="dropdown">
+                <button onclick="toggleDorpdown2()">More</button>
+                <script>
+                    // dorpdown ＼(ﾟｰﾟ＼)
+                    function toggleDorpdown2(){
+                        var dropdown = document.getElementById("menu2");
+                        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                         dropdown.style.display = "block";
+                        } else {
+                         dropdown.style.display = "none";
+                        }
+                    }
+                </script>
+                <div class="more" id="menu2">
+                    <a href="">send profile in a message</a>
+                    <a href="">send a recommendation</a>
+                    <a href="">request a recommendation</a>
+                    <a href="">save to PDF</a>
+                    <a href="">give kudos</a>
+                    <a href="">following</a>
+                    <a href="">remove connection</a>
+                    <a href="">report/block</a>
+                    <a href="">about this profile</a>
+                </div>
+             </div>
+        </div>
+        
+        <div class="profile-content">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus odio. Ut convallis consectetur elit, eget tempus est efficitur eget.</p>
+            <p>Phasellus varius lacus sit amet arcu mattis, vel efficitur risus aliquet. Nam commodo arcu a dui pellentesque, id scelerisque magna euismod.</p>
+        </div>
+    </main>
+    
+    <!-- sidbar for profile -->
+    <div class="sidebar">
+        <a href="myProfile.html" id="myLink" style="margin: 85px;">John Doe</a>
+
+        <hr>
+        <p style="margin-left: 75px;">Quick Links</p>
+        <ul>
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Learning</a></li>
+            <li><a href="#">+ Add More</a></li>
+        </ul>
+    </div>
+    <!-- messaging popup window -->
+    <div class="messaging-tab" onclick="toggleMessagingWindow()">Messaging</div>
+
+    <div id="messagingWindow" class="messaging-window">
+        <div class="messaging-content">
+            <h5>Messages</h5>
+            <hr>
+            <div class="messaging-content">
+                <ul class="conversation-list">
+                    <li class="conversation-item" onclick="loadConversation(1)">Jane D.</li>
+                    <li class="conversation-item" onclick="loadConversation(2)">Toby P.</li>
+                    <li class="conversation-item" onclick="loadConversation(3)">Joshua T.</li>
+                </ul>
+            </div>
+            <button class="close-button" onclick="toggleMessagingWindow()" onclick="closeConversation()">Close</button>
+        </div>
+    </div>
+
+    <!-- conversation window -->
+    <div id="conversationWindow" class="conversation-window">
+        <div class="conversation-content">
+            <h5>Conversation Details</h5>
+            <p style="text-align: center;">start your conversation with Jane Doe</p>
+            <button class="close-button" onclick="closeConversation()">Close</button>
+            <input class="messageinput" type="text" placeholder="Message">
+            <button class="send-message" onclick="" >Send</button>
+        </div>
+    </div>
+    <!-- button effects for the messaging related options-->
+    <script>
+        function toggleMessagingWindow() {
+            var messagingWindow = document.getElementById("messagingWindow");
+            if (messagingWindow.style.transform === "translateY(0%)") {
+                messagingWindow.style.transform = "translateY(100%)";
+            } else {
+              messagingWindow.style.transform = "translateY(0%)";
+            }
+        }
+
+        function loadConversation(conversationId) {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(0%)";
+            // Here, you would load and display the conversation details based on the conversationId
+            console.log("Loading conversation #" + conversationId);
+        }
+
+        function closeConversation() {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(100%)";
+        }
+    </script>
+
+    <script src="score.js"></script>
+</body>
+</html>
