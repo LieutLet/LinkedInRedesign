@@ -10,68 +10,80 @@
     
     <title>LinkedIn Redesign/myNetwork</title>
     <style>
-        .secBox{
-            border-style: solid;
-            border-width: 1px;
-            min-width: 300px;
-            max-width: 70%;
+        main{
+            display: grid;
+            grid-template-areas:
+                "topbar topbar  topbar"
+                "aside  content sidebar";
+                grid-template-columns: 1fr 3fr 1fr;
+                grid-template-rows: 1fr 3fr 1fr;
+                
+        }
+        nav{
+            grid-area: topbar;
+        }
+        aside{
+            grid-area: profile;
+        }
+        section{
+            grid-area: content;
+        }
+        article{
+            grid-area: sidebar;
         }
         .linksList{
             font-size: 2.5em;
             margin-left: 3%;
         }
-        .container {
-            margin-top: 25px;
+        #manageNetwork{
+            margin: auto;
+            max-height: none;
+            max-width: none;
+            
+        }
+        #manHead{
+            text-align:center;
+        }
+        #pymk{
             margin-left: auto;
-            min-width: 70%;
-            max-height: 2000px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          
-            float: left;
-        }
-        .containerAside {
-            margin-top: 25px;
-            margin-left: 70%;
-            margin-right: auto;
-            max-width: 30%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            float: left;
-        }
-        .header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            margin-bottom: 20px;
+            margin-top: 5px;
+            max-height: none;
+            max-width: none;
         }
     </style>
 </head>
 <script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
-            <li><input id="navsearch" type="text" placeholder="Search"></li>
-            <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i></a></li>
-            <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i></a></li>
-            <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i></a></li>
-            <li><a href="notifications.html"><i class="fa-solid fa-bell"></i></a></li>
-            <li><a href="more.html"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
-            
-        </ul>
-        <hr>
-    </nav>
-
-    <main class="main">
+    <main>
+        <nav class="navbar">
+            <ul>
+                <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
+                <li><input id="navsearch" type="text" placeholder="Search"></li>
+                <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i></a></li>
+                <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i></a></li>
+                <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i></a></li>
+                <li><a href="notifications.html"><i class="fa-solid fa-bell"></i></a></li>
+                <li><a href="more.html"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+                
+            </ul>
+            <hr>
+        </nav>
+        <!-- profile window -->
+        <aside>
+            <div class="sidebar">
+                <a href="myProfile.html" id="myLink">my profile</a>
+                <ul>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Learning</a></li>
+                    <li><a href="#">+ Add More</a></li>
+                </ul>
+            </div>
+        </aside>
+        <!--Main content-->
         <section>
-            <div class = "container" id = "netHeader">
-                <h1 class ="header">Manage Network</h1>
+            <div class = "container" id = "manageNetwork">
+                <h2 class = "header" id = "manHead">Manage Network</h2>
                 <ul class = "linksList">
                     <li><a href = "connections.html"><u>Connections</u></a></li>
                     <li><a href = "groups.html"><u>Groups</u></a></li>
@@ -80,24 +92,14 @@
                 </ul>
             </div>
         </section>
+        <!--People you may know-->
+        <article class = "container" id = "pymk">
+            <h5 class = "header">People You May Know:</h5>
 
-        <aside>
-            <div class = "containerAside">
-                <h3 class = "header">People you may know</h3>
-            </div>
-        </aside>
+        </article>
     </main>
         
-    <!-- profile window -->
-    <div class="sidebar">
-        <a href="myProfile.html" id="myLink">my profile</a>
-        <ul>
-            <li><a href="#">Groups</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Learning</a></li>
-            <li><a href="#">+ Add More</a></li>
-        </ul>
-    </div>
+
 
     <script src="score.js"></script>
 </body>
