@@ -33,7 +33,7 @@
                 <li style="background-color: hsl(0, 0%, 100%);"><a href="">Sugested</a></li>
             </ul>
         </nav>
-        <!-- -->
+        <!-- 1st post in the feed -->
         <div class="post">
             <div class="post-header">
                 <div class="post-header-details">
@@ -54,7 +54,7 @@
                 <button id="btnShare">Share</button>
             </div>
         </div>
-        <!-- -->
+        <!-- 2nd post in the feed -->
         <div class="post">
             <div class="post-header">
                 <div class="post-header-details">
@@ -75,7 +75,7 @@
                 <button id="btnShare">Share</button>
             </div>
         </div>
-        <!-- -->
+        <!-- 3rd post in the feed -->
         <div class="post">
             <div class="post-header">
                 <div class="post-header-details">
@@ -121,6 +121,58 @@
         <p style="text-align: center;">Baltimore Bridge Collapse</p>
         
     </div>
+
+    <!-- messaging popup window -->
+    <div class="messaging-tab" onclick="toggleMessagingWindow()">Messaging</div>
+
+    <div id="messagingWindow" class="messaging-window">
+        <div class="messaging-content">
+            <h5>Messages</h5>
+            <hr>
+            <div class="messaging-content">
+                <ul class="conversation-list">
+                    <li class="conversation-item" onclick="loadConversation(1)">Jane D.</li>
+                    <li class="conversation-item" onclick="loadConversation(2)">Toby P.</li>
+                    <li class="conversation-item" onclick="loadConversation(3)">Joshua T.</li>
+                </ul>
+            </div>
+            <button class="close-button" onclick="toggleMessagingWindow()" onclick="closeConversation()">Close</button>
+        </div>
+    </div>
+
+    <!-- conversation window -->
+    <div id="conversationWindow" class="conversation-window">
+        <div class="conversation-content">
+            <h5>Conversation Details</h5>
+            <p style="text-align: center;">start your conversation with Jane Doe</p>
+            <button class="close-button" onclick="closeConversation()">Close</button>
+            <input class="messageinput" type="text" placeholder="Message">
+            <button class="send-message" onclick="" >Send</button>
+        </div>
+    </div>
+    <!-- button effects for the messaging related options-->
+    <script>
+        function toggleMessagingWindow() {
+            var messagingWindow = document.getElementById("messagingWindow");
+            if (messagingWindow.style.transform === "translateY(0%)") {
+                messagingWindow.style.transform = "translateY(100%)";
+            } else {
+              messagingWindow.style.transform = "translateY(0%)";
+            }
+        }
+
+        function loadConversation(conversationId) {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(0%)";
+            // Here, you would load and display the conversation details based on the conversationId
+            console.log("Loading conversation #" + conversationId);
+        }
+
+        function closeConversation() {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(100%)";
+        }
+    </script>
         
     <script src="index.js"></script>
 </body>
