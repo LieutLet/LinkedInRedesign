@@ -9,66 +9,6 @@
     />
     <link rel="stylesheet" href="style.css"/>
     <title>LinkedIn Redesign/home</title>
-
-    <style>
-        /* General styles */
-        /*body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }*/
-
-        .container {
-            margin-top: 75px;
-            margin-left: 100px;
-            max-width: 1500px;
-            max-height: 2000px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Header styles */
-        .header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            margin-bottom: 20px;
-        }
-
-        .profile-picture {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .headline {
-            font-style: italic;
-            color: #666;
-        }
-
-        /* Main content styles */
-        .profile-content {
-            padding: 20px;
-        }
-
-        /* Footer styles */
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
 <body>
@@ -86,20 +26,15 @@
         <hr>
     </nav>
 
-    <main>
-        <div class="container">
-            <div class="header">
-                <img src="Banner.jpg" alt="Profile Picture" class="profile-picture">
-                <div class="name">John Doe</div>
-                <div class="headline">Software Engineer at ABC Inc.</div>
-            </div>
-        
-            <div class="profile-content">
-                <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus odio. Ut convallis consectetur elit, eget tempus est efficitur eget.</p>
-                <p>Phasellus varius lacus sit amet arcu mattis, vel efficitur risus aliquet. Nam commodo arcu a dui pellentesque, id scelerisque magna euismod.</p>
-            </div>
-            <div class ="dropdown">
+    
+    <div class="container">
+        <div class="header">
+             <img src="Banner.jpg" alt="Profile Picture" class="profile-picture">
+             <div class="name">John Doe</div>
+             <div class="headline">Software Engineer at ABC Inc.</div>
+             <div class="headline">Flint Mi</div>
+             <div class="headline">johndoe@gmail.com</div>
+             <div class ="dropdown">
                 <button onclick="toggleDorpdown()">Add to Profile</button>
                 <script>
                     function toggleDorpdown(){
@@ -121,14 +56,73 @@
                     <a href="">Recommended</a>
                     <a href="">Additional</a>
                 </div>
-            </div>
-        
-            <div class="footer">
-                <a href="#">Edit Profile</a>
-            </div>
+             </div>
+             <div class ="dropdown">
+                <button onclick="toggleDorpdown2()">More</button>
+                <script>
+                    function toggleDorpdown2(){
+                        var dropdown = document.getElementById("menu2");
+                        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                         dropdown.style.display = "block";
+                        } else {
+                         dropdown.style.display = "none";
+                        }
+                    }
+                </script>
+                <div class="more" id="menu2">
+                    <a href="">send profile in a message</a>
+                    <a href="">save to PDF</a>
+                    <a href="">build resume</a>
+                    <a href="">about this profile</a>
+                </div>
+             </div>
         </div>
         
-    </main>
+        <div class="profile-content">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus odio. Ut convallis consectetur elit, eget tempus est efficitur eget.</p>
+            <p>Phasellus varius lacus sit amet arcu mattis, vel efficitur risus aliquet. Nam commodo arcu a dui pellentesque, id scelerisque magna euismod.</p>
+        </div>
+        
+        
+        <div class="footer">
+            <a href="#">Edit Profile</a>
+        </div>
+    </div>
+    
+    <!-- button list containing the resume btn -->
+    <div class="Profilebtnlist">
+        <ul>
+            <li><button class="profileBtn">Edit Profile</button></li>
+            <li>
+                <div class ="dropdown">
+                    <button class="profileBtn" onclick="toggleDorpdown3()">My Resume</button>
+                    <script>
+                        function toggleDorpdown3(){
+                            var dropdown = document.getElementById("menu3");
+                            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                             dropdown.style.display = "block";
+                            } else {
+                             dropdown.style.display = "none";
+                            }
+                        }
+                    </script>
+                    <div class="ResumeOptions" id="menu3">
+                        <a href="">Build Resume</a>
+                        <a href="">Upload Resume</a>
+                    </div>
+                </div>
+
+                <!-- <button class="profileBtn">My Resume</button> -->
+            </li>
+            <li><button class="profileBtn">Analytics</button></li>
+            <li><button class="profileBtn">Resources</button></li>
+            <li><button class="profileBtn">Activity</button></li>
+        </ul>
+        
+    </div>
+    
+    
 
     <!-- messaging popup window -->
     <div class="messaging-tab" onclick="toggleMessagingWindow()">Messaging</div>
