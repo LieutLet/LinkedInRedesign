@@ -10,8 +10,42 @@
     
     <title>LinkedIn Redesign/myNetwork</title>
     <style>
-        .container{
-            display: flex;
+        main{
+            display: grid;
+            grid-template-areas:
+                "topbar topbar  topbar"
+                "aside  content sidebar";
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 3fr 1fr;
+                
+        }
+        nav{
+            grid-area: topbar;
+            min-height: 100px;
+        }
+        aside{
+            grid-area: profile;
+        }
+        section{
+            grid-area: content;
+        }
+        article{
+            grid-area: sidebar;
+        }
+        #Connections{
+            margin: auto;
+            max-height: none;
+            max-width: none;
+            min-width: 95%;
+            margin-top: 60px;
+        }
+        
+        #pymk{
+            margin-left: auto;
+            margin-top: 60px;
+            max-height: none;
+            max-width: none;
+            min-width: 85%;
         }
     </style>
     </head>
@@ -20,48 +54,50 @@
 
 
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
-            <li><input id="navsearch" type="text" placeholder="Search"></li>
-            <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i></a></li>
-            <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i></a></li>
-            <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i></a></li>
-            <li><a href="notifications.html"><i class="fa-solid fa-bell"></i></a></li>
-            <li><a href="more.html"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
-            
-        </ul>
-        <hr>
-    </nav>
-
     <main>
-        <div>
-            <h1>Connections</h1>
-            <div class = "container">
-                <div class = "otherProfile" id = "JaneDoe">
-                    Jane Doe
-                </div>
-                <div class = "otherProfile" id = "other">
-                    other
-                </div>
-                <div class = "otherProfile" id = "other">
-                    other
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-        <!-- profile window -->
-        <div class="sidebar">
-            <a href="myProfile.html" id="myLink">my profile</a>
+        <nav class="navbar">
             <ul>
-                <li><a href="#">Groups</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="PageNotFound.html">Learning</a></li>
-                <li><a href="#">+ Add More</a></li>
+                <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
+                <li><input id="navsearch" type="text" placeholder="Search"></li>
+                <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i></a></li>
+                <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i></a></li>
+                <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i></a></li>
+                <li><a href="notifications.html"><i class="fa-solid fa-bell"></i></a></li>
+                <li><a href="more.html"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+                
             </ul>
-        </div>
-    
-        <script src="score.js"></script>
+            <hr>
+        </nav>
+        <!-- profile window -->
+        <aside>
+            <div class="sidebar">
+                <a href="myProfile.html" id="myLink">my profile</a>
+                <ul>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Learning</a></li>
+                    <li><a href="#">+ Add More</a></li>
+                </ul>
+            </div>
+        </aside>
+        <!--Main content-->
+        <section>
+            <div class = "container" id = "Connections">
+                <h2 class = "header" id = "connectionsHeader"><a href = "myNetwork.html"><-</a> Connections</h2>
+                <ul class = "connections">
+                    <li><a href = "connections.html"><u>Jane Doe</u></a></li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!--People you may know-->
+        <article class = "container" id = "pymk">
+            <h5 class = "header">People You May Know:</h5>
+
+        </article>
+    </main>
+        
+
+
+    <script src="score.js"></script>
 </body>
