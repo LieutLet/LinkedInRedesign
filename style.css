@@ -282,3 +282,11 @@ button {
     text-align: center;
     margin-top: 20px;
 }
+.moreMain{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 1px 1px 1px hsl(0, 1%, 63%);
+    z-index: 1;
+}

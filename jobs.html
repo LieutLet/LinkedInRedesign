@@ -20,7 +20,27 @@
             <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i></a></li>
             <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i></a></li>
             <li><a href="notifications.html"><i class="fa-solid fa-bell"></i></a></li>
-            <li><a href="more.html"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+            <li><a><i onclick="toggleDorpdown4()" class="fa-solid fa-ellipsis-vertical"></i></a>
+                <script>
+                    function toggleDorpdown4(){
+                        var dropdown = document.getElementById("menu4");
+                        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                         dropdown.style.display = "block";
+                        } else {
+                         dropdown.style.display = "none";
+                        }
+                    }
+                </script>
+                <div class="moreMain" id="menu4">
+                    <a href="">Learning</a>
+                    <a href="">Talent Insights</a>
+                    <a href="">Post a Job</a>
+                    <a href="">Advertise</a>
+                    <a href="">Sell</a>
+                    <a href="">Groups</a>
+                    <a href="">Serveces Marketplace</a>
+                </div>
+            </li>
             
         </ul>
         <hr>
@@ -32,10 +52,14 @@
         </section>
     </main>
         
-    <!-- profile window -->
-    <div class="sidebar">
-        <a href="myProfile.html" id="myLink">my profile</a>
-        <ul>
+    <!-- sidbar for profile -->
+    <div class="sidebar" style="text-align: center;">
+        <img src="Banner.jpg" alt="Profile Picture" class="profile-picture" style="text-align: center;">
+        <a href="myProfile.html" id="myLink" style="margin: 85px;">John Doe</a>
+
+        <hr>
+        <p>Quick Links</p>
+        <ul style="text-align: left;">
             <li><a href="#">Groups</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Learning</a></li>

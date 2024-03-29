@@ -20,7 +20,27 @@
             <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i></a></li>
             <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i></a></li>
             <li><a href="notifications.html"><i class="fa-solid fa-bell"></i></a></li>
-            <li><a href="more.html"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+            <li><a><i onclick="toggleDorpdown4()" class="fa-solid fa-ellipsis-vertical"></i></a>
+                <script>
+                    function toggleDorpdown4(){
+                        var dropdown = document.getElementById("menu4");
+                        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                         dropdown.style.display = "block";
+                        } else {
+                         dropdown.style.display = "none";
+                        }
+                    }
+                </script>
+                <div class="moreMain" id="menu4">
+                    <a href="">Learning</a>
+                    <a href="">Talent Insights</a>
+                    <a href="">Post a Job</a>
+                    <a href="">Advertise</a>
+                    <a href="">Sell</a>
+                    <a href="">Groups</a>
+                    <a href="">Serveces Marketplace</a>
+                </div>
+            </li>
             
         </ul>
         <hr>
