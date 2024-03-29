@@ -290,3 +290,16 @@ button {
     box-shadow: 1px 1px 1px hsl(0, 1%, 63%);
     z-index: 1;
 }
+
+.dropdown-menu {
+    color:#000000;
+}
+
+.dropdown-toggle {
+    background-color: white;
+}
+
+.job-listing {
+    border: 1px solid black;
+    padding: 4px;
+}
