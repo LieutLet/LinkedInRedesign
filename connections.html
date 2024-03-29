@@ -47,6 +47,22 @@
             max-width: none;
             min-width: 85%;
         }
+        .connections{
+            display: flex;
+        }
+        .profileLink{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 150px;
+            height: 200px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profileName{
+            text-align: right;
+        }
     </style>
     </head>
 <script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
@@ -84,10 +100,16 @@
         <section>
             <div class = "container" id = "Connections">
                 <h2 class = "header" id = "connectionsHeader"><a href = "myNetwork.html"><-</a> Connections</h2>
-                <ul class = "connections">
-                    <li><a href = "connections.html"><u>Jane Doe</u></a></li>
+                <div class = "connections">
+                    <div class = "profileLink">
+                        <a class = "profileName" id = "myConProfile" href = "janeDoe.html"><u>Jane Doe</u></a>
+                        <!--Top part with background, picture, and name-->
+                        <div>
+                            
+                        </div>
+                    </div>
                     
-                </ul>
+                </div>
             </div>
         </section>
         <!--People you may know-->
