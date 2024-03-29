@@ -32,7 +32,7 @@
                     }
                 </script>
                 <div class="moreMain" id="menu4">
-                    <a href="PageNotFound.html">Learning</a>
+                    <a href="#" onclick="showToast(event)">Learning</a>
                     <a href="PageNotFound.html">Talent Insights</a>
                     <a href="PageNotFound.html">Post a Job</a>
                     <a href="PageNotFound.html">Advertise</a>
@@ -61,10 +61,79 @@
         <ul style="text-align: left;">
             <li><a href="PageNotFound.html">Groups</a></li>
             <li><a href="PageNotFound.html">Events</a></li>
-            <li><a href="PageNotFound.html">Learning</a></li>
+            <li><a href="#" onclick="showToast(event)">Learning</a></li>
             <li><a href="PageNotFound.html">+ Add More</a></li>
         </ul>
     </div>
+
+    <!-- messaging popup window -->
+    <div class="messaging-tab" onclick="toggleMessagingWindow()">Messaging</div>
+
+    <div id="messagingWindow" class="messaging-window">
+        <div class="messaging-content">
+            <h5>Messages</h5>
+            <hr>
+            <div class="messaging-content">
+                <ul class="conversation-list">
+                    <li class="conversation-item" onclick="loadConversation(1)">Jane D.</li>
+                    <li class="conversation-item" onclick="loadConversation(2)">Toby P.</li>
+                    <li class="conversation-item" onclick="loadConversation(3)">Joshua T.</li>
+                </ul>
+            </div>
+            <button class="close-button" onclick="toggleMessagingWindow()" onclick="closeConversation()">Close</button>
+        </div>
+    </div>
+
+    <!-- conversation window -->
+    <div id="conversationWindow" class="conversation-window">
+        <div class="conversation-content">
+            <h5>Conversation Details</h5>
+            <p style="text-align: center;">start your conversation with Jane Doe</p>
+            <button class="close-button" onclick="closeConversation()">Close</button>
+            <input class="messageinput" type="text" placeholder="Message">
+            <button class="send-message" onclick="showToast(event)" >Send</button>
+        </div>
+    </div>
+    <!-- button effects for the messaging related options-->
+    <script>
+        function toggleMessagingWindow() {
+            var messagingWindow = document.getElementById("messagingWindow");
+            if (messagingWindow.style.transform === "translateY(0%)") {
+                messagingWindow.style.transform = "translateY(100%)";
+            } else {
+              messagingWindow.style.transform = "translateY(0%)";
+            }
+        }
+
+        function loadConversation(conversationId) {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(0%)";
+            // Here, you would load and display the conversation details based on the conversationId
+            console.log("Loading conversation #" + conversationId);
+        }
+
+        function closeConversation() {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(100%)";
+        }
+    </script>
+    
+     <!-- toast -->
+     <div id="toast" class="hide">
+        <div id="toast-text">Task Complete</div>
+    </div>
+          
+    <script src="index.js"></script>
+    <script>
+        function showToast(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var toast = document.getElementById('toast');
+            toast.classList.remove('hide');
+            setTimeout(function(){
+                toast.classList.add('hide');
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
 
     <script src="score.js"></script>
 </body>

@@ -37,7 +37,7 @@
                 }
             </script>
             <div class="moreMain" id="menu4">
-                <a href="PageNotFound.html">Learning</a>
+                <a href="#" onclick="showToast(event)">Learning</a>
                 <a href="PageNotFound.html">Talent Insights</a>
                 <a href="PageNotFound.html">Post a Job</a>
                 <a href="PageNotFound.html">Advertise</a>
@@ -67,7 +67,7 @@
         <ul style="text-align: left;">
             <li><a href="PageNotFound.html">Groups</a></li>
             <li><a href="PageNotFound.html">Events</a></li>
-            <li><a href="PageNotFound.html">Learning</a></li>
+            <li><a href="#" onclick="showToast(event)">Learning</a></li>
             <li><a href="PageNotFound.html">+ Add More</a></li>
         </ul>
     </div>
@@ -75,5 +75,23 @@
         <a href="https://tenor.com/view/where-you-at-gif-21177622">Where You GIF</a>from <a href="https://tenor.com/search/where-gifs">Where GIFs</a></div> 
         <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
         
+
+         <!-- toast -->
+    <div id="toast" class="hide">
+        <div id="toast-text">Task Complete</div>
+    </div>
+          
+    <script src="index.js"></script>
+    <script>
+        function showToast(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var toast = document.getElementById('toast');
+            toast.classList.remove('hide');
+            setTimeout(function(){
+                toast.classList.add('hide');
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+
     <script src="score.js"></script>
 </body>
