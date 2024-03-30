@@ -15,8 +15,8 @@
             grid-template-areas:
                 "topbar topbar  topbar"
                 "aside  content sidebar";
-                grid-template-columns: 1fr 3fr 1fr;
-                grid-template-rows: 1fr 3fr 1fr;
+                grid-template-columns: 1fr 3fr 1.2fr;
+                grid-template-rows: 200px 3fr 1fr;
                 
         }
         nav{
@@ -47,10 +47,27 @@
         }
         #pymk{
             margin-left: auto;
-            margin-top: 5px;
+            margin-top: 60px;
             max-height: none;
             max-width: none;
             min-width: 85%;
+        }
+        .connections{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .profileLink{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 150px;
+            height: 200px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profileName{
+            text-align: center;
         }
     </style>
 </head>
@@ -117,9 +134,55 @@
             </div>
         </section>
         <!--People you may know-->
+        <!--People you may know-->
         <article class = "container" id = "pymk">
             <h5 class = "header">People You May Know:</h5>
+            <div class = "connections">
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Luke Skywalker</u></a>
+                    </div>
+                </div>
 
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Kylo Ren</u></a>
+                    </div>
+                </div>
+
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Alex Stockford</u></a>
+                    </div>
+                </div>
+
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Caleb Porrett</u></a>
+                    </div>
+                </div>
+
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Wren Lockwood</u></a>
+                    </div>
+                </div>
+            </div>
         </article>
     </main>
     
