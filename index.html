@@ -143,6 +143,9 @@
         
     </div>
 
+    <!--Make a Post-->
+    <div class = "makeAPost"><button id = "postButton">+ Make a Post</button></div>
+
     <!-- messaging popup window -->
     <div class="messaging-tab" onclick="toggleMessagingWindow()">Messaging</div>
 
@@ -157,7 +160,7 @@
                     <li class="conversation-item" onclick="loadConversation(3)">Joshua T.</li>
                 </ul>
             </div>
-            <button class="close-button" onclick="toggleMessagingWindow()" onclick="closeConversation()">Close</button>
+            <button class="close-button" onclick="toggleMessagingWindow()" onclick="closeConversation()">Close X</button>
         </div>
     </div>
 
@@ -166,7 +169,7 @@
         <div class="conversation-content">
             <h5>Conversation Details</h5>
             <p style="text-align: center;">start your conversation with Jane Doe</p>
-            <button class="close-button" onclick="closeConversation()">Close</button>
+            <button class="close-button" onclick="closeConversation()">Close X</button>
             <input class="messageinput" type="text" placeholder="Message">
             <button class="send-message" onclick="showToast(event)" >Send</button>
         </div>
