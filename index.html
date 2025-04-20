@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <title>LinkedIn Redesign/home</title>
+</head>
+<script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
+            <li><input id="navsearch" type="text" placeholder="Search"></li>
+            <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i><br>Feed</a></li>
+            <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i><br>Jobs</a></li>
+            <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i><br>My Network</a></li>
+            <li><a href="notifications.html"><i class="fa-solid fa-bell"></i><br>Notifications</a></li>
+            <li><a><i onclick="toggleDorpdown4()" class="fa-solid fa-ellipsis-vertical" style="text-align: center;"></i><br>More</a>
+                <script>
+                    function toggleDorpdown4(){
+                        var dropdown = document.getElementById("menu4");
+                        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                         dropdown.style.display = "block";
+                        } else {
+                         dropdown.style.display = "none";
+                        }
+                    }
+                </script>
+                <div class="moreMain" id="menu4">
+                    <a href="#" onclick="showToast(event)">Learning</a>
+                    <a href="PageNotFound.html">Talent Insights</a>
+                    <a href="PageNotFound.html">Post a Job</a>
+                    <a href="PageNotFound.html">Advertise</a>
+                    <a href="PageNotFound.html">Sell</a>
+                    <a href="PageNotFound.html">Groups</a>
+                    <a href="PageNotFound.html">Services Marketplace</a>
+                    <a href="PageNotFound.html">Logout</a>
+                </div>
+            </li>
+            
+        </ul>
+        <hr>
+    </nav>
+    <main class="main">
+        <nav style="background-color: hsl(0, 0%, 100%);" >
+            <ul>
+                <li style="background-color: hsl(0, 0%, 100%);"><a href="connections.html" style="border: solid;" style="border-color: gray;">Following & Connections</a></li>
+                <li style="background-color: hsl(0, 0%, 100%);"><a href="PageNotFound.html" style="border: solid;" style="border-color: gray;">Hashtags</a></li>
+                <li style="background-color: hsl(0, 0%, 100%);"><a href="PageNotFound.html" style="border: solid;" style="border-color: gray;">Suggested</a></li>
+            </ul>
+        </nav>
+        <!-- 1st post in the feed -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-header-details">
+                    <h2>John Doe</h2>
+                    <p>Software Engineer at ABC Inc.</p>
+                    <p>Posted on January 1, 2024</p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam velit eget justo efficitur, sit amet laoreet odio posuere.</p>
+                <p>Curabitur ac nisi ac arcu interdum sollicitudin. Vivamus vehicula magna nec purus efficitur tempus.</p>
+                <p>Phasellus in ullamcorper lorem. Sed sed elit vestibulum, convallis lectus eget, eleifend arcu. Nulla facilisi.</p>
+            </div>
+            <hr>
+            <div class="post-actions">
+                <button id="btnLike">Like</button>
+                <button id="btnComment">Comment</button>
+                <button id="btnShare">Share</button>
+            </div>
+        </div>
+        <!-- 2nd post in the feed -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-header-details">
+                    <h2>Toby Powers</h2>
+                    <p>Software Engineer at ABC Inc.</p>
+                    <p>Posted on January 1, 2024</p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam velit eget justo efficitur, sit amet laoreet odio posuere.</p>
+                <p>Curabitur ac nisi ac arcu interdum sollicitudin. Vivamus vehicula magna nec purus efficitur tempus.</p>
+                <p>Phasellus in ullamcorper lorem. Sed sed elit vestibulum, convallis lectus eget, eleifend arcu. Nulla facilisi.</p>
+            </div>
+            <hr>
+            <div class="post-actions">
+                <button id="btnLike">Like</button>
+                <button id="btnComment">Comment</button>
+                <button id="btnShare">Share</button>
+            </div>
+        </div>
+        <!-- 3rd post in the feed -->
+        <div class="post">
+            <div class="post-header">
+                <div class="post-header-details">
+                    <h2>Josh Thomas</h2>
+                    <p>Software Engineer at ABC Inc.</p>
+                    <p>Posted on January 1, 2024</p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam velit eget justo efficitur, sit amet laoreet odio posuere.</p>
+                <p>Curabitur ac nisi ac arcu interdum sollicitudin. Vivamus vehicula magna nec purus efficitur tempus.</p>
+                <p>Phasellus in ullamcorper lorem. Sed sed elit vestibulum, convallis lectus eget, eleifend arcu. Nulla facilisi.</p>
+            </div>
+            <hr>
+            <div class="post-actions">
+                <button id="btnLike">Like</button>
+                <button id="btnComment">Comment</button>
+                <button id="btnShare">Share</button>
+            </div>
+        </div>
+
+    </main>
+    <!-- sidbar for profile -->
+    <div class="sidebar" style="text-align: center;">
+        <img src="Banner.jpg" alt="Profile Picture" class="profile-picture" style="text-align: center;">
+        <a href="myProfile.html" id="myLink" style="margin: 85px;">John Doe</a>
+
+        <hr>
+        <p>Quick Links</p>
+        <ul style="text-align: left;">
+            <li><a href="PageNotFound.html">Groups</a></li>
+            <li><a href="PageNotFound.html">Events</a></li>
+            <li><a href="#" onclick="showToast(event)">Learning</a></li>
+            <li><a href="PageNotFound.html">+ Add More</a></li>
+        </ul>
+    </div>
+
+    <!-- sidebar for news -->
+    <div class="newsWindow">
+        <h5 style="text-align: center;">News</h5>
+        <a target="_blank" href="bridge.jpg">
+            <img src="bridge.jpg" alt="Shipwreck" width="200px" style="margin-left: 23px;">
+        </a>
+        <p style="text-align: center;">Baltimore Bridge Collapse</p>
+        
+    </div>
+
+    <!--Make a Post-->
+    <div class = "makeAPost"><button id = "postButton">+ Make a Post</button></div>
+
+    <!-- messaging popup window -->
+    <div class="messaging-tab" onclick="toggleMessagingWindow()">Messaging</div>
+
+    <div id="messagingWindow" class="messaging-window">
+        <div class="messaging-content">
+            <h5>Messages</h5>
+            <hr>
+            <div class="messaging-content">
+                <ul class="conversation-list">
+                    <li class="conversation-item" onclick="loadConversation(1)">Jane D.</li>
+                    <li class="conversation-item" onclick="loadConversation(2)">Toby P.</li>
+                    <li class="conversation-item" onclick="loadConversation(3)">Joshua T.</li>
+                </ul>
+            </div>
+            <button class="close-button" onclick="toggleMessagingWindow()" onclick="closeConversation()">Close X</button>
+        </div>
+    </div>
+
+    <!-- conversation window -->
+    <div id="conversationWindow" class="conversation-window">
+        <div class="conversation-content">
+            <h5>Conversation Details</h5>
+            <p style="text-align: center;">start your conversation with Jane Doe</p>
+            <button class="close-button" onclick="closeConversation()">Close X</button>
+            <input class="messageinput" type="text" placeholder="Message">
+            <button class="send-message" onclick="showToast(event)" >Send</button>
+        </div>
+    </div>
+    <!-- button effects for the messaging related options-->
+    <script>
+        function toggleMessagingWindow() {
+            var messagingWindow = document.getElementById("messagingWindow");
+            if (messagingWindow.style.transform === "translateY(0%)") {
+                messagingWindow.style.transform = "translateY(100%)";
+            } else {
+              messagingWindow.style.transform = "translateY(0%)";
+            }
+        }
+
+        function loadConversation(conversationId) {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(0%)";
+            // Here, you would load and display the conversation details based on the conversationId
+            console.log("Loading conversation #" + conversationId);
+        }
+
+        function closeConversation() {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(100%)";
+        }
+    </script>
+
+    <!-- toast -->
+    <div id="toast" class="hide">
+        <div id="toast-text">Task Complete</div>
+    </div>
+          
+    <script src="index.js"></script>
+    <script>
+        function showToast(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var toast = document.getElementById('toast');
+            toast.classList.remove('hide');
+            setTimeout(function(){
+                toast.classList.add('hide');
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+    
+        
+    <script src="index.js"></script>
+</body>
+</html>

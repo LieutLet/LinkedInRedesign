@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    
+    <title>LinkedIn Redesign/myNetwork</title>
+    <style>
+        .tenor-gif-embed{
+            float: right;
+        }
+    </style>
+    </head>
+<script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
+            <li><input id="navsearch" type="text" placeholder="Search"></li>
+            <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i><br>Feed</a></li>
+            <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i><br>Jobs</a></li>
+            <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i><br>My Network</a></li>
+            <li><a href="notifications.html"><i class="fa-solid fa-bell"></i><br>Notifications</a></li>
+            <li><a><i onclick="toggleDorpdown4()" class="fa-solid fa-ellipsis-vertical" style="text-align: center;"></i><br>More</a>
+                <script>
+                    function toggleDorpdown4(){
+                        var dropdown = document.getElementById("menu4");
+                        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                         dropdown.style.display = "block";
+                        } else {
+                         dropdown.style.display = "none";
+                        }
+                    }
+                </script>
+                <div class="moreMain" id="menu4">
+                    <a href="#" onclick="showToast(event)">Learning</a>
+                    <a href="PageNotFound.html">Talent Insights</a>
+                    <a href="PageNotFound.html">Post a Job</a>
+                    <a href="PageNotFound.html">Advertise</a>
+                    <a href="PageNotFound.html">Sell</a>
+                    <a href="PageNotFound.html">Groups</a>
+                    <a href="PageNotFound.html">Services Marketplace</a>
+                    <a href="PageNotFound.html">Logout</a>
+                </div>
+            </li>
+            
+        </ul>
+        <hr>
+    </nav>
+
+    <div class = "header">
+        <h1>Sorry, this feature hasn't been implemented yet</h1>
+    </div>
+
+
+   
+
+    <!-- sidbar for profile -->
+    <div class="sidebar" style="text-align: center;">
+        <img src="Banner.jpg" alt="Profile Picture" class="profile-picture" style="text-align: center;">
+        <a href="myProfile.html" id="myLink" style="margin: 85px;">John Doe</a>
+
+        <hr>
+        <p>Quick Links</p>
+        <ul style="text-align: left;">
+            <li><a href="PageNotFound.html">Groups</a></li>
+            <li><a href="PageNotFound.html">Events</a></li>
+            <li><a href="#" onclick="showToast(event)">Learning</a></li>
+            <li><a href="PageNotFound.html">+ Add More</a></li>
+        </ul>
+    </div>
+    <div class="tenor-gif-embed" data-postid="21177622" data-share-method="host" data-aspect-ratio="1.03226" data-width="50%">
+        <a href="https://tenor.com/view/where-you-at-gif-21177622">Where You GIF</a>from <a href="https://tenor.com/search/where-gifs">Where GIFs</a></div> 
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        
+
+         <!-- toast -->
+    <div id="toast" class="hide">
+        <div id="toast-text">Task Complete</div>
+    </div>
+          
+    <script src="index.js"></script>
+    <script>
+        function showToast(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var toast = document.getElementById('toast');
+            toast.classList.remove('hide');
+            setTimeout(function(){
+                toast.classList.add('hide');
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+
+    <script src="score.js"></script>
+</body>

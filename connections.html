@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    
+    <title>LinkedIn Redesign/myNetwork</title>
+    <style>
+        main{
+            display: grid;
+            grid-template-areas:
+                "topbar topbar  topbar"
+                "aside  content sidebar";
+            grid-template-columns: 1fr 3fr 1.2fr;
+            grid-template-rows: 100px 3fr 1fr;
+                
+        }
+        nav{
+            grid-area: topbar;
+            min-height: 100px;
+        }
+        aside{
+            grid-area: profile;
+        }
+        section{
+            grid-area: content;
+        }
+        article{
+            grid-area: sidebar;
+        }
+        #Connections{
+            margin: auto;
+            max-height: none;
+            max-width: none;
+            min-width: 95%;
+            margin-top: 60px;
+        }
+        
+        #pymk{
+            margin-left: auto;
+            margin-top: 60px;
+            max-height: none;
+            max-width: none;
+            min-width: 85%;
+        }
+        .connections{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .profileLink{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 150px;
+            height: 200px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profileName{
+            text-align: center;
+        }
+    </style>
+    </head>
+<script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
+
+
+
+<body>
+    <main>
+        <nav class="navbar">
+            <ul>
+                <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
+                <li><input id="navsearch" type="text" placeholder="Search"></li>
+                <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i><br>Feed</a></li>
+                <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i><br>Jobs</a></li>
+                <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i><br>My Network</a></li>
+                <li><a href="notifications.html"><i class="fa-solid fa-bell"></i><br>Notifications</a></li>
+                <li><a><i onclick="toggleDorpdown4()" class="fa-solid fa-ellipsis-vertical" style="text-align: center;"></i><br>More</a>
+                    <script>
+                        function toggleDorpdown4(){
+                            var dropdown = document.getElementById("menu4");
+                            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                             dropdown.style.display = "block";
+                            } else {
+                             dropdown.style.display = "none";
+                            }
+                        }
+                    </script>
+                    <div class="moreMain" id="menu4">
+                        <a href="#" onclick="showToast(event)">Learning</a>
+                        <a href="PageNotFound.html">Talent Insights</a>
+                        <a href="PageNotFound.html">Post a Job</a>
+                        <a href="PageNotFound.html">Advertise</a>
+                        <a href="PageNotFound.html">Sell</a>
+                        <a href="PageNotFound.html">Groups</a>
+                        <a href="PageNotFound.html">Services Marketplace</a>
+                        <a href="PageNotFound.html">Logout</a>
+                    </div>
+                </li>
+                
+            </ul>
+            <hr>
+        </nav>
+        <!-- sidbar for profile -->
+    <div class="sidebar" style="text-align: center;">
+        <img src="Banner.jpg" alt="Profile Picture" class="profile-picture" style="text-align: center;">
+        <a href="myProfile.html" id="myLink" style="margin: 85px;">John Doe</a>
+
+        <hr>
+        <p>Quick Links</p>
+        <ul style="text-align: left;">
+            <li><a href="PageNotFound.html">Groups</a></li>
+            <li><a href="PageNotFound.html">Events</a></li>
+            <li><a href="#" onclick="showToast(event)">Learning</a></li>
+            <li><a href="PageNotFound.html">+ Add More</a></li>
+        </ul>
+    </div>
+        <!--Main content-->
+        <section>
+            <div class = "container" id = "Connections">
+                <h2 class = "header" id = "connectionsHeader"><a href = "myNetwork.html"><-</a> Connections</h2>
+                <div class = "connections">
+                    <div class = "profileLink">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                        
+                        <!--Top part with background, picture, and name-->
+                        <div>
+                            <a class = "profileName" id = "myConProfile" href = "janeDoe.html"><u>Jane Doe</u></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!--People you may know-->
+        <article class = "container" id = "pymk">
+            <h5 class = "header">People You May Know:</h5>
+            <div class = "connections">
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Luke Skywalker</u></a>
+                    </div>
+                </div>
+
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Kylo Ren</u></a>
+                    </div>
+                </div>
+
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Alex Stockford</u></a>
+                    </div>
+                </div>
+
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Caleb Porrett</u></a>
+                    </div>
+                </div>
+
+                <div class = "profileLink">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACUCAMAAAAEVFNMAAAAMFBMVEXk5ueutLfo6uu+w8arsbTh4+TKztC3vL/X2tuzubzd3+HU19m7wMPR1NanrbHFycsqHIn2AAAEI0lEQVR4nO2c23asIAxAJVxERfn/vz2oPXbG6ThAMGHWYr+0fepeWYFwi13XaDQajUaj0Wg0Go3G9wKw/dC/v1ZMMBztbLyXUnpvZjt2NTsDWOMGoX4ZemfGWuMMnRmEUOKZ8Pcw16gMo1/Osr/SIczcgs+A9i+xfVIejK5JGab+SndXttUYg5afdDdlzy36A4xDjG8wdiO36wrYSN9a0mKKtN2V+WeLaUkRFoo5xpAU3w3L6muTfcWgGYV19Hh7NOZLCoiaf88oz2UMiQPuYOIxDgUjz1f1TGmclRCbsWHxzZghDmOOEIPLDTDTuLOZI26HfhmECXCAPMSgUb709Q48yleomTjEukcKS9oQZ6zSztAOOzC4FA4hnkiF47adl8KSNIl15jLiEVLhERtgIRZK325GlbldmHKvBB4fYWUIcyJvq3ESpqzOgCwbG45SuMAkIXpKYXxG0O6em3ATPgsX8KUV/rpZAreh2yEtHN9Wmjv0+n1dwVMK4w4lNhbSTd2I9hWKdsfh0MKUa58AetQtpGOugxm9CSU+XcMepAhHfFYFEhlg6jNtdE6Q33MglxOSWHcNMap2cFwkoSLMcfGFyGLFcuGsPz6beetLXOV+gDk7wkw3+rnHKYyXzXm+PZNu3nMJ3mc0OTcH5PdHzyQfYzJdjB+kHrzyDbiDJOMKfJMulOp4zZhwSEG7LXoLmKjHVXU8ZNyAMSItlOR/xvjApK6VlaC9qv0IdH5466zUYOp7Bg+j6f9UVsrNVb0nPwBt/bI8S6tFeFun7gaANnIY9g1q+CmNri8XTsDWLbMyaqjedtU9wW30ltVN28l4KV2/4aT0Zp7GrjLtVXS0xjullrX/6HmGWFQYh700IUF0Bd1fIXbjZKQT6rpwbI1U0s+W1/no7roscg/WYujlxJQg4Z9ar972S11oL6GOkM/MEGzfl+JPLELOpF12oTq4y+auz2EOGW2plEHL1z6/DGfRUxxhhirmMhL3jfMw3ZzMAJPMztw/ld2tjYFrMpTUFVti3HawAtoXje7h3N90AzaVju5hvNyQF9vUcBuq+IRR4IHzB4oeCa3Ze7ewGsqdAoAu8WLmo3GxcyEY7xptJ+NCJ4WIu5dk5RL3o/jn+SnGDj2/kfquxsjvURD7bsZf5btlBcKXbrw9GOc3eECB5occ4+zZTXPoCsRNHkV9+5Mha73JMOD+k3cbjWxJxBlnLCuKvGnOZklOCvzTPxzJ9aNE/xmKxJmCccTtpPbv534noKBxUojZAywSuyaK9GkgSWkQhIk/wEl9HoB/MF6C+Lm4wJP8EkSXO5Zl8Cvxm48SHZ8liD5aQb9vL0XkVAyWvWrsxD5x4173HMR+0qGGMrcTu4G+/6gyksjvkminaiGydKzfMa2C2G8Mvj7S4CLOt27+Aer8OUiTpx6/AAAAAElFTkSuQmCC" alt="Profile Picture" class="profile-picture" id = "smallVersionProfilePicture">
+                    
+                    <!--Top part with background, picture, and name-->
+                    <div>
+                        <a class = "profileName" id = "myConProfile" href = "PageNotFound.html"><u>Wren Lockwood</u></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- messaging popup window -->
+    <div class="messaging-tab" onclick="toggleMessagingWindow()">Messaging</div>
+
+    <div id="messagingWindow" class="messaging-window">
+        <div class="messaging-content">
+            <h5>Messages</h5>
+            <hr>
+            <div class="messaging-content">
+                <ul class="conversation-list">
+                    <li class="conversation-item" onclick="loadConversation(1)">Jane D.</li>
+                    <li class="conversation-item" onclick="loadConversation(2)">Toby P.</li>
+                    <li class="conversation-item" onclick="loadConversation(3)">Joshua T.</li>
+                </ul>
+            </div>
+            <button class="close-button" onclick="toggleMessagingWindow()" onclick="closeConversation()">Close</button>
+        </div>
+    </div>
+
+    <!-- conversation window -->
+    <div id="conversationWindow" class="conversation-window">
+        <div class="conversation-content">
+            <h5>Conversation Details</h5>
+            <p style="text-align: center;">start your conversation with Jane Doe</p>
+            <button class="close-button" onclick="closeConversation()">Close</button>
+            <input class="messageinput" type="text" placeholder="Message">
+            <button class="send-message" onclick="showToast(event)" >Send</button>
+        </div>
+    </div>
+    <!-- button effects for the messaging related options-->
+    <script>
+        function toggleMessagingWindow() {
+            var messagingWindow = document.getElementById("messagingWindow");
+            if (messagingWindow.style.transform === "translateY(0%)") {
+                messagingWindow.style.transform = "translateY(100%)";
+            } else {
+              messagingWindow.style.transform = "translateY(0%)";
+            }
+        }
+
+        function loadConversation(conversationId) {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(0%)";
+            // Here, you would load and display the conversation details based on the conversationId
+            console.log("Loading conversation #" + conversationId);
+        }
+
+        function closeConversation() {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(100%)";
+        }
+    </script>
+     
+     <!-- toast -->
+     <div id="toast" class="hide">
+        <div id="toast-text">Task Complete</div>
+    </div>
+          
+    <script src="index.js"></script>
+    <script>
+        function showToast(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var toast = document.getElementById('toast');
+            toast.classList.remove('hide');
+            setTimeout(function(){
+                toast.classList.add('hide');
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+
+
+    <script src="score.js"></script>
+</body>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>LinkedIn Redesign/jobs</title>
+</head>
+<script src="https://kit.fontawesome.com/db6fa870b9.js" crossorigin="anonymous"></script>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i></li>
+            <li><input id="navsearch" type="text" placeholder="Search"></li>
+            <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i><br>Feed</a></li>
+            <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i><br>Jobs</a></li>
+            <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i><br>My Network</a></li>
+            <li><a href="notifications.html"><i class="fa-solid fa-bell"></i><br>Notifications</a></li>
+            <li><a><i onclick="toggleDorpdown4()" class="fa-solid fa-ellipsis-vertical" style="text-align: center;"></i><br>More</a>
+                <script>
+                    function toggleDorpdown4(){
+                        var dropdown = document.getElementById("menu4");
+                        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                         dropdown.style.display = "block";
+                        } else {
+                         dropdown.style.display = "none";
+                        }
+                    }
+                </script>
+                <div class="moreMain" id="menu4">
+                    <a href="#" onclick="showToast(event)">Learning</a>
+                    <a href="PageNotFound.html">Talent Insights</a>
+                    <a href="PageNotFound.html">Post a Job</a>
+                    <a href="PageNotFound.html">Advertise</a>
+                    <a href="PageNotFound.html">Sell</a>
+                    <a href="PageNotFound.html">Groups</a>
+                    <a href="PageNotFound.html">Services Marketplace</a>
+                    <a href="PageNotFound.html">Logout</a>
+                </div>
+            </li>
+            
+        </ul>
+        <hr>
+    </nav>
+
+    <main class="main">
+        <section>
+            <div class="row">
+                <div class="container" style="padding:1px">
+                    <!-- job navbar here be dragons -->
+                    <div class="container col-sm-12" style="margin:0px">
+                        <form action="/action_page.php" class="col-sm-11">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+                        <div class="dropdown col-sm-1">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" style="color:black; background-color: transparent;">
+                                <span class="glyphicon glyphicon-filter"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li style="margin: 0px 3px 0px 3px">Location</li>
+                                <li style="margin: 0px 3px 0px 3px; border: 1px solid #9e9e9e;">
+                                    <form><input type="text" class="form-control"></form>
+                                </li>
+                                <li style="margin: 0px 3px 0px 3px">Sort By</li>
+                                <li style="margin: 0px 3px 0px 3px"><form><input type="text" class="form-control" style="border: 1px solid #9e9e9e"></form></li>
+                                <li style="margin: 0px 3px 0px 3px">Date Posted</li>
+                                <li style="margin: 0px 3px 0px 3px"><form><input type="text" class="form-control" style="border: 1px solid #9e9e9e"></form></li>
+                                <li style="margin: 0px 3px 0px 3px">Experience Level</li>
+                                <li style="margin: 0px 3px 0px 3px"><form><input type="text" class="form-control" placeholder="# of Years" style="border: 1px solid #9e9e9e"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="padding: 3px; margin-top:0px; border:1px solid #9e9e9e" class="container col-sm-6">
+                            <div class="job-listing">
+                                <h3>Software Development Intern</h3>
+                                <h4>Flint Tech Company</h4>
+                                <p>details: Looking for a hard working college student with experience in...</p>
+                            </div>
+                            <div class="job-listing">
+                                <h3>Software Engineer</h3>
+                                <h4>Bank of America</h4>
+                                <p>details: Looking for someone with 3 years of experience and a...</p>
+                            </div>
+                            <div class="job-listing">
+                                <h3>Shift Manager</h3>
+                                <h4>Culver's</h4>
+                                <p>details: Must be serve safe certified, have experience in a kitchen...</p>
+                            </div>
+                            <div class="job-listing">
+                                <h3>Evil Henchman</h3>
+                                <h4>Doofenshmirtz Evil Inc.</h4>
+                                <p>details: Together we will take over the tru state area! Platipi need not apply...</p>
+                            </div>
+                            <div class="job-listing">
+                                <h3>Island Representative</h3>
+                                <h4>Nook Inc</h4>
+                                <p>details: Looking for a partner to help us in a joint venture on a remote island getaway...</p>
+                            </div>
+                        </div>
+                        <div style="margin-top:0px; border:1px solid #9e9e9e" class="container col-sm-6">
+                            <h1>Software Development Intern</h1>
+                                <h4>Flint Tech Company</h4>
+                                <button style="background-color: #0077B5; color: white; Padding: 8px; font-size:large;" onclick="showToast(event)">Apply</button>
+                                <button style="background-color: lightgrey; color: black; Padding: 8px; font-size:large;">Save</button>
+                                <p>details: Looking for a hard working college student with experience in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+        
+    <!-- sidbar for profile -->
+    <div class="sidebar" style="text-align: center;">
+        <img src="Banner.jpg" alt="Profile Picture" class="profile-picture" style="text-align: center;">
+        <a href="myProfile.html" id="myLink" style="margin: 85px;">John Doe</a>
+
+        <hr>
+        <p>Quick Links</p>
+        <ul style="text-align: left;">
+            <li><a href="PageNotFound.html">Groups</a></li>
+            <li><a href="PageNotFound.html">Events</a></li>
+            <li><a href="#" onclick="showToast(event)">Learning</a></li>
+            <li><a href="PageNotFound.html">+ Add More</a></li>
+        </ul>
+    </div>
+
+
+    <!-- messaging popup window -->
+    <div class="messaging-tab" onclick="toggleMessagingWindow()">Messaging</div>
+
+    <div id="messagingWindow" class="messaging-window">
+        <div class="messaging-content">
+            <h5>Messages</h5>
+            <hr>
+            <div class="messaging-content">
+                <ul class="conversation-list">
+                    <li class="conversation-item" onclick="loadConversation(1)">Jane D.</li>
+                    <li class="conversation-item" onclick="loadConversation(2)">Toby P.</li>
+                    <li class="conversation-item" onclick="loadConversation(3)">Joshua T.</li>
+                </ul>
+            </div>
+            <button class="close-button" onclick="toggleMessagingWindow()" onclick="closeConversation()">Close</button>
+        </div>
+    </div>
+
+    <!-- conversation window -->
+    <div id="conversationWindow" class="conversation-window">
+        <div class="conversation-content">
+            <h5>Conversation Details</h5>
+            <p style="text-align: center;">start your conversation with Jane Doe</p>
+            <button class="close-button" onclick="closeConversation()">Close</button>
+            <input class="messageinput" type="text" placeholder="Message">
+            <button class="send-message" onclick="" >Send</button>
+        </div>
+    </div>
+    <!-- button effects for the messaging related options-->
+    <script>
+        function toggleMessagingWindow() {
+            var messagingWindow = document.getElementById("messagingWindow");
+            if (messagingWindow.style.transform === "translateY(0%)") {
+                messagingWindow.style.transform = "translateY(100%)";
+            } else {
+              messagingWindow.style.transform = "translateY(0%)";
+            }
+        }
+
+        function loadConversation(conversationId) {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(0%)";
+            // Here, you would load and display the conversation details based on the conversationId
+            console.log("Loading conversation #" + conversationId);
+        }
+
+        function closeConversation() {
+            var conversationWindow = document.getElementById("conversationWindow");
+            conversationWindow.style.transform = "translateY(100%)";
+        }
+    </script>
+
+     <!-- toast -->
+     <div id="toast" class="hide">
+        <div id="toast-text">Task Complete</div>
+    </div>
+          
+    <script src="index.js"></script>
+    <script>
+        function showToast(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var toast = document.getElementById('toast');
+            toast.classList.remove('hide');
+            setTimeout(function(){
+                toast.classList.add('hide');
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+        
+    <script src="index.js"></script>
+</body>
+</html>

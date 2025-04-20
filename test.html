@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toast Notification</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+        <li><i class="fa-brands fa-linkedin" style="color:rgb(72, 72, 189)"></i><br><span>Feed</span></li>
+        <li><input id="navsearch" type="text" placeholder="Search"></li>
+        <li><a href="index.html"><i href="index.html" class="fa-solid fa-bars"></i><br><span>Home</span></a></li>
+        <li><a href="jobs.html"><i class="fa-solid fa-briefcase"></i><br><span>Jobs</span></a></li>
+        <li><a href="myNetwork.html"><i class="fa-solid fa-user-group"></i><br><span>My Network</span></a></li>
+        <li><a href="notifications.html"><i class="fa-solid fa-bell"></i><br><span>Notifications</span></a></li>
+        <li>
+            <a><i onclick="toggleDorpdown4()" class="fa-solid fa-ellipsis-vertical"></i><br><span>More</span></a>
+            <script>
+                function toggleDorpdown4() {
+                    var dropdown = document.getElementById("menu4");
+                    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                        dropdown.style.display = "block";
+                    } else {
+                        dropdown.style.display = "none";
+                    }
+                }
+            </script>
+            <div class="moreMain" id="menu4">
+                <a href="#" onclick="showToast(event)">Learning</a>
+                <a href="PageNotFound.html">Talent Insights</a>
+                <a href="PageNotFound.html">Post a Job</a>
+                <a href="PageNotFound.html">Advertise</a>
+                <a href="PageNotFound.html">Sell</a>
+                <a href="PageNotFound.html">Groups</a>
+                <a href="PageNotFound.html">Services Marketplace</a>
+            </div>
+        </li>
+    </ul>
+    <hr>
+</nav>
+<style>
+  .navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Adjusted */
+    align-items: center; /* Adjusted */
+}
+
+.navbar li {
+    float: left;
+    margin: 20px;
+}
+
+.navbar a i {
+    font-size: 40px;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 10px;
+    min-width: 50px;
+    color: gray;
+}
+
+.navbar i {
+    font-size: 50px;
+}
+
+.navbar hr {
+    margin: -20px;
+}
+</style>
+
+
+</body>
+</html>
+
