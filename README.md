@@ -40,3 +40,5 @@ the order that the tasks must be completed in:
   5. Select the “Add to Profile” button on your profile page. Then select skills
   6. Select the jobs tab from the navigation bar above. Click on the search bar for the jobs section
      to emulate searching. Then select the apply option if appropriate.
+
+# LinkedInRedesign
